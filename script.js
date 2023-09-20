@@ -2,7 +2,7 @@ const pokeSearch = document.getElementById('searchInput');
 const pokeSearchButton = document.getElementById('searchButton');
 
 pokeSearchButton.addEventListener('click', () => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokeSearch.value}`)
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokeSearch.value.toLowerCase()}`)
     .then(res => res.json())
     .then(data => {
         console.log(data)
